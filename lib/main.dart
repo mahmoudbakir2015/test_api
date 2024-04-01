@@ -1,4 +1,6 @@
+import 'package:api_test/core/api/dio_consumer.dart';
 import 'package:api_test/cubit/observer.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:api_test/cubit/user_cubit.dart';
@@ -9,7 +11,10 @@ void main() {
   Bloc.observer = MyBlocObserver();
   runApp(
     BlocProvider(
-      create: (context) => UserCubit(),
+      create: (context) => UserCubit(
+          api: DioConsumer(
+        dio: Dio(),
+      )),
       child: const MyApp(),
     ),
   );

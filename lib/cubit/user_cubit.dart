@@ -1,10 +1,12 @@
+import 'package:api_test/core/api/api_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:api_test/cubit/user_state.dart';
 import 'package:image_picker/image_picker.dart';
 
 class UserCubit extends Cubit<UserState> {
-  UserCubit() : super(UserInitial());
+  UserCubit({required this.api}) : super(UserInitial());
+  final ApiConsumer api;
   //Sign in Form key
   GlobalKey<FormState> signInFormKey = GlobalKey();
   //Sign in email
