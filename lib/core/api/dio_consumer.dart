@@ -3,6 +3,8 @@ import 'package:api_test/core/api/api_interceptors.dart';
 import 'package:api_test/core/api/end_point.dart';
 import 'package:dio/dio.dart';
 
+import '../errors/exceptions.dart';
+
 class DioConsumer extends ApiConsumer {
   final Dio dio;
 
