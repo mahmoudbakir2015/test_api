@@ -20,5 +20,5 @@ class ApiKey {
   static String confirmPassword = "confirmPassword";
   static String location = "location";
   static String profilePic = "profilePic";
-  static String wordToken = "profilePic";
+  static String wordToken = "FOODAPI";
 }
